@@ -28,11 +28,20 @@
             border-radius: 8px; /* Rounds the corners of the box */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle shadow */
         }
+        .main-image {
+    max-width: 100%;    /* Ensures it never overflows the screen */
+    height: auto;       /* Keeps the proportions correct so it doesn't look squished */
+    display: block;     /* Helps with centering */
+    margin: 20px auto;  /* Adds space and centers it */
+    border-radius: 12px; /* Matches your paragraph styling */
+}
     </style>
 </head>
 <body>
 
     <h1>Welcome to Our Web Development Class</h1>
+
+    <img src="my-photo.jpg" alt="A beautiful landscape from Unsplash" class="main-image">
     
     <p>This is my very first website! In this class, we are learning how to use GitHub to host projects and share our work with the world.</p>
     
