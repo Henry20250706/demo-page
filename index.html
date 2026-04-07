@@ -2,54 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>My First Webpage</title>
     <style>
-        /* This is the CSS section where we design the page */
+        /* Tip: Grouping your styles by "layout" then "specific elements" helps organization */
         
         body {
-            background-color: #f0f4f8; /* A soft light-blue background */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner fonts */
-            color: #333; /* Dark grey text for easier reading */
-            line-height: 1.6; /* Adds space between lines of text */
-            padding: 40px;
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Added more fallbacks */
+            color: #333;
+            line-height: 1.6;
+            padding: 20px; /* Reduced padding for better mobile view */
             max-width: 800px;
-            margin: 0 auto; /* Centers the content on the screen */
+            margin: 0 auto;
         }
 
         h1 {
-            color: #2c3e50; /* A deep navy blue for the heading */
-            border-bottom: 2px solid #3498db; /* Adds a stylish underline */
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db; /* Slightly thicker line */
             padding-bottom: 10px;
+            text-align: center; /* Centering the header looks more like a homepage */
+        }
+
+        .main-image {
+            width: 100%;       /* Takes up full width of the container... */
+            max-width: 400px;  /* ...but stops growing at 400px so it stays "nice" */
+            height: auto;
+            display: block;
+            margin: 30px auto; /* Centering the image balances the page */
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Added shadow to match paragraphs */
         }
 
         p {
             background-color: white;
             padding: 20px;
-            border-radius: 8px; /* Rounds the corners of the box */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Adds space between the white boxes */
         }
-        .main-image {
-    max-width: 25%;    /* Ensures it never overflows the screen */
-    height: auto;       /* Keeps the proportions correct so it doesn't look squished */
-    display: block;     /* Helps with centering */
-    margin: 20px 0;  /* Adds space and centers it */
-    border-radius: 12px; /* Matches your paragraph styling */
-}
+
+        /* Styling the link so it's not just basic blue */
+        a {
+            color: #3498db;
+            text-decoration: none; /* Removes the underline */
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline only appears when you hover! */
+            color: #2980b9;
+        }
     </style>
 </head>
 <body>
 
     <h1>Welcome to Our Intro to AI Class</h1>
 
-    <img src="regencygirl123-landscape-10205701.jpg" alt="This is an image" class="main-image">
+    <img src="regencygirl123-landscape-10205701.jpg" alt="A beautiful landscape" class="main-image">
     
     <p>This is my very first website! In this class, we are learning how to use GitHub to host projects and share our work with the world.</p>
     
     <p>Update: I just learned how to edit my code and add custom CSS styling!</p>
 
     <p>Check out my friend's website: 
-   <a href="https://qqiumax.github.io/" target="_blank">Click here to visit!</a>
-</p>
+        <a href="https://qqiumax.github.io/" target="_blank">Click here to visit!</a>
+    </p>
 
 </body>
 </html>
