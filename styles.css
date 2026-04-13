@@ -2,38 +2,30 @@
 body {
     background-color: #121212;
     color: #e0e0e0;
-    /* This ensures a clean sans-serif look */
     font-family: sans-serif; 
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    /* Switched from flex to block to allow bubbles to work */
     display: block; 
 }
 
-/* Heading Styling (The "Bubble" look) */
+/* Heading Styling with your new color */
 h1, h2 {
-    color: #00e676;            /* Neon Green */
-    background-color: #1e1e1e; /* Dark bubble background */
-    padding: 10px 25px;        /* Side padding creates the pill shape */
+    color: #D2AF74;            /* Your requested Gold color */
+    background-color: #1e1e1e; 
+    padding: 10px 25px;        
     border-radius: 50px;       
-    display: inline-block;     /* This makes the background wrap the text */
+    display: inline-block;     
     margin-top: 30px;
     margin-bottom: 15px;
     font-weight: 700;
-    border: 1px solid #333;    /* Makes the bubble edge visible */
+    border: 1px solid #333;    
 }
 
-h1 {
-    font-size: 2rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
 
-h2 {
-    font-size: 1.5rem;
-    color: #4db8ff;            /* Blue accent for H2 */
-}
-
-/* Paragraphs (Minimal) */
+/* Paragraphs */
 p {
     background-color: transparent !important;
     box-shadow: none !important;
@@ -41,11 +33,12 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Links */
+/* Links with Hover Effect */
 a {
     color: #4db8ff;
     text-decoration: none;
     font-weight: bold;
+    position: relative; /* Necessary for advanced tooltips if needed later */
 }
 
 a:hover {
@@ -53,21 +46,13 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Fixed Responsive Images */
+/* Responsive Images at 25% */
 .main-image {
-    /* Using width ensures it stays at 25% of the page */
     width: 25%;
-    min-width: 200px; /* Prevents it from getting TOO tiny on phones */
+    min-width: 200px; 
     height: auto;
     display: block;
     margin: 20px 0;
     border-radius: 8px;
     border: 1px solid #333;
-}
-
-/* List Styling */
-ul {
-    padding-left: 20px;
-    list-style-type: disc;
-    color: #e0e0e0;
 }
