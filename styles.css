@@ -46,9 +46,9 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Images at 25% */
+/* Responsive Images at 50% */
 .main-image {
-    width: 25%;
+    width: 50%;
     min-width: 200px; 
     height: auto;
     display: block;
