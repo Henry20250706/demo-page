@@ -2,45 +2,43 @@
 body {
     background-color: #121212;
     color: #e0e0e0;
-    /* Clean Sans-Serif Stack */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    /* This ensures a clean sans-serif look */
+    font-family: sans-serif; 
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    /* Switched from flex to block to allow bubbles to work */
+    display: block; 
 }
 
 /* Heading Styling (The "Bubble" look) */
 h1, h2 {
-    color: #00e676;          /* Vibrant accent color (Neon Green/Teal) */
-    background-color: #1e1e1e; /* Slightly lighter than the body for depth */
-    padding: 10px 20px;      /* Space inside the bubble */
-    border-radius: 50px;     /* Rounded "pill" shape */
-    display: inline-block;   /* Ensures the bubble only fits the text width */
+    color: #00e676;            /* Neon Green */
+    background-color: #1e1e1e; /* Dark bubble background */
+    padding: 10px 25px;        /* Side padding creates the pill shape */
+    border-radius: 50px;       
+    display: inline-block;     /* This makes the background wrap the text */
     margin-top: 30px;
     margin-bottom: 15px;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    border: 1px solid #333;    /* Makes the bubble edge visible */
 }
 
 h1 {
     font-size: 2rem;
-    border: 1px solid #333;  /* Subtle border to define the shape */
 }
 
 h2 {
     font-size: 1.5rem;
-    color: #4db8ff;          /* Different accent color for subheadings */
+    color: #4db8ff;            /* Blue accent for H2 */
 }
 
 /* Paragraphs (Minimal) */
 p {
-    background-color: transparent;
+    background-color: transparent !important;
+    box-shadow: none !important;
     padding: 0;
     margin-bottom: 1.5rem;
-    max-width: 100%;
 }
 
 /* Links */
@@ -55,19 +53,21 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Images */
+/* Fixed Responsive Images */
 .main-image {
+    /* Using width ensures it stays at 25% of the page */
     width: 25%;
-    max-width: 25%;
+    min-width: 200px; /* Prevents it from getting TOO tiny on phones */
     height: auto;
     display: block;
     margin: 20px 0;
     border-radius: 8px;
-    border: 1px solid #333; /* Matches the heading vibe */
+    border: 1px solid #333;
 }
 
 /* List Styling */
 ul {
     padding-left: 20px;
     list-style-type: disc;
+    color: #e0e0e0;
 }
