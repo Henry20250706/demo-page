@@ -56,3 +56,21 @@ a:hover {
     border-radius: 8px;
     border: 1px solid #333;
 }
+/* This targets only the first image */
+.moving-image {
+    position: relative; /* Allows it to move relative to its starting spot */
+    animation: sideToSide 4s ease-in-out infinite; /* 4 seconds long, repeats forever */
+}
+
+/* This defines the actual movement */
+@keyframes sideToSide {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 50px; /* How far to the right it goes */
+    }
+    100% {
+        left: 0;
+    }
+}
