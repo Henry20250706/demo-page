@@ -130,5 +130,8 @@ input[type="text"] {
 }
 
 .fast-spin {
-    animation: superSpin 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Adding these three lines to 'force' the animation to show */
+    display: block !important;
+    transform-origin: center center;
+    animation: superSpin 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
