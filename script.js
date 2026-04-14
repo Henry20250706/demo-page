@@ -61,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (spinBtn && endImg) {
         spinBtn.addEventListener('click', function() {
-            // Add the CSS class to trigger animation
             endImg.classList.add('fast-spin');
-
-            // Remove the class after 1.5 seconds so it can be spun again
             setTimeout(function() {
                 endImg.classList.remove('fast-spin');
             }, 1500); 
         });
     }
-});
+
+}); // <--- This was likely the missing bracket/parenthesis!
