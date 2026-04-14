@@ -8,19 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 2. The Text Display Logic
+    // 2. The Text Display Logic (Chatbot)
     const inputField = document.getElementById('userInput');
     const submitBtn = document.getElementById('submitButton');
     const display = document.getElementById('displayArea');
 
     if (submitBtn && inputField && display) {
         submitBtn.addEventListener('click', function() {
-            // Convert to lowercase so "AI" and "ai" both work
             const message = inputField.value.trim().toLowerCase();
             
             console.log("Button clicked. User typed:", message);
 
-            // Logic Tree: Checking for different inputs
             if (message === "") {
                 display.textContent = "Please type something first!";
                 display.style.color = "red";
@@ -31,22 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             else if (message.includes("ai") || message.includes("robot")) {
                 display.textContent = "AI is fascinating! We are learning to build it right now.";
-                display.style.color = "#00e676"; // A cool tech-green color
+                display.style.color = "#00e676"; 
             }
             else if (message.includes("github")) {
                 display.textContent = "GitHub is where we host our projects and share code!";
-                display.style.color = "#4db8ff"; // GitHub-ish blue
+                display.style.color = "#4db8ff"; 
             }
             else {
-                // The "Else" handles any input that didn't match the specific cases above
                 display.textContent = "I don't recognize '" + message + "' yet, but I'm learning!";
                 display.style.color = "#D2AF74";
             }
 
-            // Clear the input box after each submission
             inputField.value = ""; 
         });
-    } else {
-        console.error("JavaScript couldn't find your input, button, or display area.");
     }
-});
+
+    // 3. The Theme Toggle Logic (Cyber Mode)
+    const themeBtn = document.getElementById('themeButton');
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function() {
+            // This adds or removes the 'cyber-mode' class from the <body>
