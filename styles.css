@@ -90,4 +90,25 @@ a:hover {
     background-color: #e5c58b; /* Slightly lighter on hover */
     transform: scale(1.05);    /* Slight "pop" effect */
 }
+.input-section {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    background-color: #252525;
+    color: white;
+    border: 1px solid #D2AF74; /* Your gold color */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#displayArea {
+    font-size: 1.2rem;
+    color: #D2AF74;
+    font-weight: bold;
+    margin-top: 20px;
+    min-height: 1.6em; /* Keeps the page from jumping when text appears */
+}
 }
