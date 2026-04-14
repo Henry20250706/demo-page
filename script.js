@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const alertBtn = document.getElementById('myButton');
     if (alertBtn) {
         alertBtn.addEventListener('click', function() {
-            alert("The BUTTON has been activated! 🤖✨");
+            alert("The BUTTON has been activated! :D (Wicked smile)");
         });
     }
 
@@ -15,25 +15,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (submitBtn && inputField && display) {
         submitBtn.addEventListener('click', function() {
-            // .trim() removes accidental spaces at the start or end
-            const message = inputField.value.trim();
+            // Convert to lowercase so "AI" and "ai" both work
+            const message = inputField.value.trim().toLowerCase();
             
-            // This line helps you debug! Check your F12 Console to see this.
             console.log("Button clicked. User typed:", message);
 
+            // Logic Tree: Checking for different inputs
             if (message === "") {
                 display.textContent = "Please type something first!";
                 display.style.color = "red";
-            } else {
-                display.textContent = "You typed: " + message;
-                display.style.color = "#D2AF74";
-                
-                // Clear the box so the user can type again
-                inputField.value = ""; 
+            } 
+            else if (message === "hello" || message === "hi") {
+                display.textContent = "Greetings! Welcome to our AI class.";
+                display.style.color = "#D2AF74"; 
             }
+            else if (message.includes("ai") || message.includes("robot")) {
+                display.textContent = "AI is fascinating! We are learning to build it right now.";
+                display.style.color = "#00e676"; // A cool tech-green color
+            }
+            else if (message.includes("github")) {
+                display.textContent = "GitHub is where we host our projects and share code!";
+                display.style.color = "#4db8ff"; // GitHub-ish blue
+            }
+            else {
+                // The "Else" handles any input that didn't match the specific cases above
+                display.textContent = "I don't recognize '" + message + "' yet, but I'm learning!";
+                display.style.color = "#D2AF74";
+            }
+
+            // Clear the input box after each submission
+            inputField.value = ""; 
         });
     } else {
-        // This will tell you if JS can't find your HTML elements
         console.error("JavaScript couldn't find your input, button, or display area.");
     }
 });
