@@ -73,4 +73,21 @@ a:hover {
     100% {
         left: 0;
     }
+    
+    #myButton {
+    background-color: #D2AF74; /* Matches your heading color */
+    color: #121212;            /* Dark text for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;           /* Makes the mouse turn into a hand */
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+#myButton:hover {
+    background-color: #e5c58b; /* Slightly lighter on hover */
+    transform: scale(1.05);    /* Slight "pop" effect */
+}
 }
