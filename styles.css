@@ -122,4 +122,14 @@ input[type="text"] {
     border-color: #00ff00 !important;
     background-color: #001100 !important;
 }
+/* The animation instructions */
+@keyframes superSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(3600deg); } /* 3600 degrees = 10 full rotations */
+}
+
+/* The class that JavaScript will add */
+.fast-spin {
+    animation: superSpin 1.5s linear; /* Spins for 1.5 seconds */
+}
 }
