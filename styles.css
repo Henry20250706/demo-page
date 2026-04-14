@@ -65,7 +65,7 @@ a:hover {
     0% { left: 0; }
     50% { left: 50px; }
     100% { left: 0; }
-} /* <--- FIXED: This bracket was missing! */
+}
 
 /* Buttons */
 #myButton, #themeButton, #spinButton, #submitButton {
@@ -109,6 +109,26 @@ input[type="text"] {
     min-height: 1.6em;
 }
 
-/* Cyber Mode (Triggered by JS) */
+/* --- THE MISSING PARTS BELOW --- */
+
+/* Cyber Mode Styles */
 .cyber-mode {
-    background-color: #003300 !important;
+    background-color: #001a00 !important; /* Matrix Black-Green */
+    color: #00ff41 !important;            /* Classic Matrix Green */
+}
+
+.cyber-mode h1, .cyber-mode h2 {
+    color: #00ff41 !important;
+    border-color: #00ff41 !important;
+    background-color: #000 !important;
+}
+
+/* Spin Animation */
+@keyframes superSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(3600deg); } /* 10 full rotations */
+}
+
+.fast-spin {
+    animation: superSpin 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
