@@ -111,4 +111,15 @@ input[type="text"] {
     margin-top: 20px;
     min-height: 1.6em; /* Keeps the page from jumping when text appears */
 }
+/* This class only gets applied via JavaScript */
+.cyber-mode {
+    background-color: #003300 !important; /* Deep Matrix Green */
+    color: #00ff00 !important;            /* Bright Neon Green */
+}
+
+.cyber-mode h1, .cyber-mode h2 {
+    color: #00ff00 !important;
+    border-color: #00ff00 !important;
+    background-color: #001100 !important;
+}
 }
