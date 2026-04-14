@@ -1,5 +1,3 @@
-// Wrap everything in a "DOMContentLoaded" function. 
-// This tells JS: "Wait until the HTML is 100% finished loading before running."
 document.addEventListener('DOMContentLoaded', function() {
 
     // 1. The Alert Button Logic
@@ -17,16 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (submitBtn && inputField && display) {
         submitBtn.addEventListener('click', function() {
-            const message = inputField.value;
+            // .trim() removes accidental spaces at the start or end
+            const message = inputField.value.trim();
+            
+            // This line helps you debug! Check your F12 Console to see this.
+            console.log("Button clicked. User typed:", message);
+
             if (message === "") {
                 display.textContent = "Please type something first!";
                 display.style.color = "red";
             } else {
                 display.textContent = "You typed: " + message;
                 display.style.color = "#D2AF74";
+                
+                // Clear the box so the user can type again
                 inputField.value = ""; 
             }
         });
+    } else {
+        // This will tell you if JS can't find your HTML elements
+        console.error("JavaScript couldn't find your input, button, or display area.");
     }
-
 });
